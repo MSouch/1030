@@ -1,16 +1,5 @@
-def add(first_number, second_number):
-    return first_number + second_number
-
-def subtract(first_number, second_number):
-    return first_number - second_number
-
-def multiply(first_number, second_number):
-    return first_number * second_number
-
-def devide(first_number, second_number):
-    return first_number / second_number
-
-
+#import the calculator module with functions 
+import calculator
 
 print("Welcome to simple calculator.")
 print("I will add/subtract/multiple/divide any two numbers you provide.")
@@ -23,16 +12,18 @@ first_number = float(first_input)
 second_number = float(second_input)
 
 if operation == "add":
-    result = first_number + second_number
+    result = calculator.add(first_number, second_number)
 
 elif operation == "subtract":
-    result = first_number - second_number
+    result = calculator.subtract(first_number, second_number)
 
 elif operation == "multiply":
-    result = first_number * second_number
+    result = calculator.multiply(first_number, second_number)
 
 elif operation == "divide":
-    result = first_number / second_number
+    result = calculator.divide(first_number, second_number)
     
 else:
     print("Sorry, I do not understand your request.")
+#print the result
+print(f"Result: {result}")
